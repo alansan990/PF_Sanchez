@@ -1,0 +1,155 @@
+/* Globales */
+body {
+    background-image: url('/img/franz_fondo.jpg');
+    background-size: cover;
+    /* Ajusta el tamaño de la imagen para cubrir todo el fondo */
+    background-repeat: no-repeat;
+    /* Evita que la imagen de fondo se repita */
+    background-attachment: fixed;
+    /* Fija la imagen de fondo para que no se desplace con el contenido */
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.content {
+    background-color: rgba(0, 0, 0, 0.588); /* El último valor (0.7) controla la opacidad */
+    padding: 100px;
+    border-radius: 10px;
+}
+
+.titulo {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* Utiliza una fuente similar a la del logo de Franz Ferdinand */
+  text-transform: uppercase; /* Convierte el texto en mayúsculas */
+  letter-spacing: 4px; /* Aumenta el espaciado entre letras */
+  font-weight: bold; /* Hace que el texto sea más audaz */
+  color: #ffffff; /* Color característico de Franz Ferdinand */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Agrega una sombra de texto */
+  text-align: center;
+}
+
+/* CSS del header */
+
+.image {
+    transform: scale(0.8);
+    align-content: center;
+}
+
+.Header {
+    padding: 60px;
+    text-align: center;
+    background-image: url("../img/always\ ascending.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.HeaderDiv {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+}
+
+/* Barra de navegacion*/
+.navBar {
+    display: flex;
+    justify-content: center;
+    background-color: orange;
+}
+
+.navBar a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.navBar a:hover {
+    background-color: black;
+}
+
+@media screen and (max-width: 700px) {
+    .navBar {
+        flex-direction: column;
+    }
+}
+
+.item {
+    border-radius: 12px;
+    background-color: gray;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.item p {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    text-size-adjust: auto;
+}
+
+.gridPadre {
+    /*Esto sirve para separar en columnas y filas*/
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    /*Nos permite separar las columnas entre si*/
+    gap: 20px;
+    column-gap: 35px;
+    /*Justify permite distribuir los elementos de forma horizontal*/
+    justify-items: center;
+    /*Align permite distribuidr los elementos de forma vertical*/
+    align-items: center;
+    /* grid-template-columns: auto auto auto; */
+}
+
+/* Media query para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+    .gridPadre {
+        grid-template-columns: 1fr;
+      padding: 5px; /* Cambia el espaciado en pantallas más pequeñas */
+    }
+  }
+
+/* CSS de la pagina de Historia */
+
+.Contenedor {
+    display: flex;
+}
+
+.MiAside {
+    flex: 30%;
+    background-color: rgba(128, 128, 128, 0.777);
+    border-radius: 100px;
+    padding: 40px;
+}
+
+.MiSection {
+    flex: 70%;
+    background-color: rgba(0, 0, 0, 0.707);
+    border-radius: 100px;
+    color: white;
+    padding: 40px;
+}
+
+@media screen and (max-width: 700px) {
+    .Contenedor {
+        flex-direction: column;
+    }
+}
+
+/* Estilos para el footer */
+footer {
+    background-color: #333; /* Color de fondo del footer */
+    color: #fff; /* Color del texto del footer */
+    text-align: center;
+    padding: 10px 0; /* Espaciado interno superior e inferior del footer */
+}
+
+/* Estilos para el texto del footer */
+footer p {
+    margin: 0; /* Elimina el margen predeterminado */
+}
