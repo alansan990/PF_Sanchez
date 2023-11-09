@@ -1,0 +1,163 @@
+/* Globales */
+body {
+    background-image: url('/img/franz_fondo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  $content-background: rgba(0, 0, 0, 0.588);
+  
+  .content {
+    background-color: $content-background;
+    padding: 100px;
+    border-radius: 10px;
+  }
+  
+  .titulo {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    animation: opacidadAnimacion 3s alternate infinite;
+  }
+  
+  @keyframes opacidadAnimacion {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* CSS del header */
+  .image {
+    transform: scale(0.8);
+    align-content: center;
+  }
+  
+  .Header {
+    padding: 60px;
+    text-align: center;
+    background-image: url("../img/always ascending.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .HeaderDiv {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+  }
+  
+  /* Barra de navegacion*/
+  .navBar {
+    display: flex;
+    justify-content: center;
+    background-color: orange;
+  
+    a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      text-align: center;
+  
+      &:hover {
+        background-color: black;
+      }
+    }
+  }
+  
+  @media screen and (max-width: 700px) {
+    .navBar {
+      flex-direction: column;
+    }
+  }
+  
+  .item {
+    border-radius: 12px;
+    background-color: gray;
+    border: 1px solid black;
+    text-align: center;
+  
+    p {
+      font-size: 30px;
+      font-weight: bold;
+      text-align: center;
+      text-transform: uppercase;
+      text-size-adjust: auto;
+    }
+  }
+  
+  .gridPadre {
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    column-gap: 35px;
+    justify-items: center;
+    align-items: center;
+  
+    @media screen and (max-width: 768px) {
+      grid-template-columns: 1fr;
+      padding: 5px;
+    }
+  }
+  
+  /* CSS de la pagina de Historia */
+  .Contenedor {
+    display: flex;
+  
+    .MiAside {
+      flex: 30%;
+      background-color: rgba(128, 128, 128, 0.777);
+      padding: 40px;
+      text-align: center;
+    }
+  
+    .MiSection {
+      flex: 70%;
+      background-color: rgba(0, 0, 0, 0.707);
+      color: white;
+      padding: 40px;
+    }
+  
+    .MiParrafo {
+      flex: 50%;
+      text-align: justify;
+    }
+  
+    .Imagen {
+      flex: 30%;
+    }
+  
+    @media screen and (max-width: 700px) {
+      flex-direction: column;
+    }
+  }
+  
+  /* Estilos para el footer */
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+  
+    /* Estilos para el texto del footer */
+    p {
+      margin: 0;
+    }
+  }
+  
