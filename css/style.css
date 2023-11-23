@@ -1,4 +1,3 @@
-/* Globales */
 body {
   background-image: url("/img/franz_fondo.jpg");
   background-size: cover;
@@ -10,8 +9,7 @@ body {
 }
 
 .content {
-  background-color: rgba(0, 0, 0, 0.588);
-  padding: 100px;
+  padding: 50px;
   border-radius: 10px;
 }
 
@@ -37,13 +35,12 @@ body {
     opacity: 1;
   }
 }
-/* CSS del header */
 .image {
   transform: scale(0.8);
   align-content: center;
 }
 
-.Header {
+.header {
   padding: 60px;
   text-align: center;
   background-image: url("../img/always ascending.png");
@@ -51,7 +48,16 @@ body {
   background-size: cover;
 }
 
-.HeaderDiv {
+@media screen and (max-width: 600px) {
+  .header {
+    padding: 30px;
+    text-align: center;
+    background-image: url("../img/always ascending icono.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+.headerDiv {
   background-color: rgba(0, 0, 0, 0.7);
   padding: 10px;
   border-radius: 10px;
@@ -59,11 +65,10 @@ body {
   font-size: 20px;
 }
 
-/* Barra de navegacion*/
 .navBar {
   display: flex;
   justify-content: center;
-  background-color: orange;
+  background-color: rgb(232, 135, 32);
 }
 .navBar a {
   color: white;
@@ -71,11 +76,11 @@ body {
   text-decoration: none;
   text-align: center;
 }
-.navBar a:hover {
+.navBar ahover {
   background-color: black;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 600px) {
   .navBar {
     flex-direction: column;
   }
@@ -94,6 +99,46 @@ body {
   text-size-adjust: auto;
 }
 
+.disco {
+  border-radius: 20px;
+  background-color: rgb(232, 135, 32);
+  border: 1px solid black;
+}
+.disco .subtitulo {
+  text-align: center;
+}
+.disco ul {
+  max-height: 300px;
+  overflow-y: auto;
+  list-style-type: none;
+  padding: 0;
+}
+.disco li {
+  padding: 3px;
+  border-bottom: 1px solid black;
+}
+.disco li:hover {
+  background-color: black;
+}
+@media screen and (max-width: 600px) {
+  .disco ul {
+    max-height: fit-content;
+  }
+}
+
+.video {
+  width: 460px;
+  height: 315px;
+  padding: 20px;
+}
+@media screen and (max-width: 600px) {
+  .video .video {
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+  }
+}
+
 .gridPadre {
   display: grid;
   place-content: center;
@@ -103,52 +148,73 @@ body {
   justify-items: center;
   align-items: center;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
   .gridPadre {
-    grid-template-columns: 1fr;
+    grid-template-columns: max-content;
     padding: 5px;
   }
 }
 
-/* CSS de la pagina de Historia */
-.Contenedor {
+.contenedor {
   display: flex;
 }
-.Contenedor .MiAside {
+.contenedor .miAside {
   flex: 30%;
   background-color: rgba(128, 128, 128, 0.777);
   padding: 40px;
   text-align: center;
 }
-.Contenedor .MiSection {
+.contenedor .miSection {
   flex: 70%;
   background-color: rgba(0, 0, 0, 0.707);
   color: white;
   padding: 40px;
 }
-.Contenedor .MiParrafo {
+.contenedor .miParrafo {
   flex: 50%;
   text-align: justify;
 }
-.Contenedor .Imagen {
+.contenedor .imagen {
   flex: 30%;
 }
 @media screen and (max-width: 700px) {
-  .Contenedor {
+  .contenedor {
     flex-direction: column;
   }
 }
 
-/* Estilos para el footer */
-footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 10px 0;
-  /* Estilos para el texto del footer */
+.imagenTour {
+  width: 300px;
+  height: 200px;
 }
-footer p {
+
+body {
   margin: 0;
+  padding: 0;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  padding: 20px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.social-icons {
+  margin-bottom: 15px;
+}
+
+.social-icon {
+  font-size: 24px;
+  margin-right: 15px;
+  color: white;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  color: #007bff;
 }
 
 /*# sourceMappingURL=style.css.map */

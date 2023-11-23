@@ -7,15 +7,19 @@
     <meta name="description" content="Sitio no oficial de la banda Franz Ferdinand">
     <title>Inicio | Franz Ferdinand</title>
     <!-- Agrega la etiqueta link para el ícono de la pestaña del navegador -->
-  <link rel="icon" type="image/x-icon" href="img/franz icono.ico">
+    <link rel="icon" type="image/x-icon" href="img/franz icono.ico">
+    <!--Links para que los iconos del footer aparezcan-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/fontawesome-free-6.4.2-web/css/all.min.css">
+    <!--Link de hoja de estilos-->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 
 
 <body>
-    <header class="Header">
-        <div class="HeaderDiv">
+    <header class="header">
+        <div class="headerDiv">
             <h1 class="titulo">Franz Ferdinand</h1>
             <p>Sitio web de la banda indie rock formada en Glasgow, Escocia. Franz Ferdinand</p>
         </div>
@@ -23,19 +27,18 @@
 
     <nav class="navBar">
         <a href="index.html">Inicio</a>
-        <a href="Discografia.html">Discografia</a>
-        <a href="Concierto.html">Galeria</a>
-        <a href="Tour.html">Tour</a>
-        <a href="Historia.html">Historia</a>
+        <a href="discografia.html">Discografia</a>
+        <a href="galeria.html">Galeria</a>
+        <a href="tour.html">Tour</a>
+        <a href="historia.html">Historia</a>
     </nav>
-    <h2 class="titulo mt-3 mb-3">Conoce a Franz Ferdinand</h2>
+    <h2 class="titulo mt-3 mb-3">Escucha a Franz Ferdinand</h2>
     <main>
         <div class="content">
             <div class="gridPadre">
 
                 <div class="item">
-                    <iframe style="border-radius:12px"
-                        src="https://open.spotify.com/embed/album/0vi5ePiEHrGZJF7QhnDW2z?utm_source=generator"
+                    <iframe src="https://open.spotify.com/embed/album/0vi5ePiEHrGZJF7QhnDW2z?utm_source=generator"
                         width="100%" height="352" frameBorder="0" allowfullscreen=""
                         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                         loading="lazy">
@@ -77,10 +80,21 @@
         </div>
 
 
+
     </main>
 
     <footer>
-        <p>&copy; 2023 Franz Ferdinand. Todos los derechos reservados.</p>
+        <div class="container text-center">
+            <div class="social-icons">
+                <a href="https://www.facebook.com/officialfranzferdinand/?locale=es_LA" target="_blank"
+                    class="social-icon"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.youtube.com/channel/UCrvJwuMaOeKg1Rb062glUJQ" target="_blank"
+                    class="social-icon"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.instagram.com/franz_ferdinand/" target="_blank" class="social-icon"><i
+                        class="fab fa-instagram"></i></a>
+            </div>
+            <p>&copy; FanPage de Franz Ferdinand. Todos los derechos reservados a Franz Ferdinand.</p>
+        </div>
     </footer>
     <script src="https://open.spotify.com/embed/iframe-api/v1" async></script>
 

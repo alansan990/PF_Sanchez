@@ -1,163 +1,252 @@
-/* Globales */
+// Globales
+
+@import 'variable.scss';
+@import 'mixin.scss';
+
 body {
-    background-image: url('/img/franz_fondo.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url('/img/franz_fondo.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.content {
+  // background-color: $content-background;
+  padding: 50px;
+  border-radius: 10px;
+}
+
+//Estilo para los h1 de cada html
+.titulo {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  animation: opacidadAnimacion 3s alternate infinite;
+}
+
+//Animacion del titulo
+@keyframes opacidadAnimacion {
+  0% {
+    opacity: 1;
   }
-  
-  $content-background: rgba(0, 0, 0, 0.588);
-  
-  .content {
-    background-color: $content-background;
-    padding: 100px;
-    border-radius: 10px;
+
+  50% {
+    opacity: 0.5;
   }
-  
-  .titulo {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    font-weight: bold;
-    color: #ffffff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+  100% {
+    opacity: 1;
+  }
+}
+
+//CSS del header
+.image {
+  transform: scale(0.8);
+  align-content: center;
+}
+
+.header {
+  padding: 60px;
+  text-align: center;
+  background-image: url("../img/always ascending.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+//mq para pantallas mas pequeñas
+@media screen and (max-width: 600px) {
+  .header {
+    padding: 30px;
     text-align: center;
-    animation: opacidadAnimacion 3s alternate infinite;
-  }
-  
-  @keyframes opacidadAnimacion {
-    0% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0.5;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  
-  /* CSS del header */
-  .image {
-    transform: scale(0.8);
-    align-content: center;
-  }
-  
-  .Header {
-    padding: 60px;
-    text-align: center;
-    background-image: url("../img/always ascending.png");
+    background-image: url("../img/always\ ascending\ icono.jpg");
     background-repeat: no-repeat;
     background-size: cover;
   }
-  
-  .HeaderDiv {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 10px;
-    border-radius: 10px;
+}
+
+.headerDiv {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  font-size: 20px;
+}
+
+// Barra de navegacion
+.navBar {
+  display: flex;
+  justify-content: center;
+  background-color: $background-color;
+
+  a {
     color: white;
-    font-size: 20px;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+    @include hover-background(black);
   }
-  
-  /* Barra de navegacion*/
+}
+
+@media screen and (max-width: 600px) {
   .navBar {
-    display: flex;
-    justify-content: center;
-    background-color: orange;
-  
-    a {
-      color: white;
-      padding: 14px 20px;
-      text-decoration: none;
-      text-align: center;
-  
-      &:hover {
-        background-color: black;
-      }
+    flex-direction: column;
+  }
+}
+
+//Esto controla la cuadricula donde estan los reproductores de spotify en el html Index
+.item {
+  border-radius: 12px;
+  background-color: gray;
+  border: 1px solid black;
+  text-align: center;
+
+
+  p {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    text-size-adjust: auto;
+  }
+}
+
+//Estilo del html de discografia especificamente los discos
+.disco {
+  border-radius: 20px;
+  background-color: $background-color;
+  border: 1px solid black;
+
+  .subtitulo {
+    text-align: center;
+  }
+
+  ul {
+    max-height: 300px;
+    overflow-y: auto;
+    list-style-type: none;
+    padding: 0;
+  }
+
+  li {
+    padding: 3px;
+    border-bottom: 1px solid black;
+  }
+
+  li:hover {
+    background-color: black;
+  }
+
+  @media screen and (max-width: 600px) {
+    ul {
+      max-height: fit-content;
     }
   }
-  
+}
+
+//Estilo de videos en el html de concierto
+.video {
+  width: 460px;
+  height: 315px;
+  padding: 20px;
+
+  @media screen and (max-width: 600px) {
+    .video {
+      width: fit-content;
+      height: fit-content;
+      margin: auto;
+    }
+  }
+}
+
+//Esta etiqueta es el grid que aparece en los html de Index, discografia y concierto
+.gridPadre {
+  display: grid;
+  place-content: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  column-gap: 35px;
+  justify-items: center;
+  align-items: center;
+
+  @media screen and (max-width: 600px) {
+    grid-template-columns: max-content;
+    padding: 5px;
+  }
+}
+
+// CSS de la pagina de Historia
+.contenedor {
+  display: flex;
+
+  .miAside {
+    flex: 30%;
+    background-color: rgba(128, 128, 128, 0.777);
+    padding: 40px;
+    text-align: center;
+  }
+
+  .miSection {
+    flex: 70%;
+    background-color: rgba(0, 0, 0, 0.707);
+    color: white;
+    padding: 40px;
+  }
+
+  .miParrafo {
+    flex: 50%;
+    text-align: justify;
+  }
+
+  .imagen {
+    flex: 30%;
+  }
+
   @media screen and (max-width: 700px) {
-    .navBar {
-      flex-direction: column;
-    }
+    flex-direction: column;
   }
-  
-  .item {
-    border-radius: 12px;
-    background-color: gray;
-    border: 1px solid black;
-    text-align: center;
-  
-    p {
-      font-size: 30px;
-      font-weight: bold;
-      text-align: center;
-      text-transform: uppercase;
-      text-size-adjust: auto;
-    }
-  }
-  
-  .gridPadre {
-    display: grid;
-    place-content: center;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    column-gap: 35px;
-    justify-items: center;
-    align-items: center;
-  
-    @media screen and (max-width: 768px) {
-      grid-template-columns: 1fr;
-      padding: 5px;
-    }
-  }
-  
-  /* CSS de la pagina de Historia */
-  .Contenedor {
-    display: flex;
-  
-    .MiAside {
-      flex: 30%;
-      background-color: rgba(128, 128, 128, 0.777);
-      padding: 40px;
-      text-align: center;
-    }
-  
-    .MiSection {
-      flex: 70%;
-      background-color: rgba(0, 0, 0, 0.707);
-      color: white;
-      padding: 40px;
-    }
-  
-    .MiParrafo {
-      flex: 50%;
-      text-align: justify;
-    }
-  
-    .Imagen {
-      flex: 30%;
-    }
-  
-    @media screen and (max-width: 700px) {
-      flex-direction: column;
-    }
-  }
-  
-  /* Estilos para el footer */
-  footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-  
-    /* Estilos para el texto del footer */
-    p {
-      margin: 0;
-    }
-  }
-  
+}
+
+//Estilo de Tour
+.imagenTour {
+  width: 300px;
+  height: 200px;
+}
+
+// Estilos para el footer
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  padding: 20px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.social-icons {
+  margin-bottom: 15px;
+}
+
+.social-icon {
+  font-size: 24px;
+  margin-right: 15px;
+  color: white;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  color: #007bff;
+  // Cambia el color al pasar el mouse sobre el ícono
+}
